@@ -3,9 +3,9 @@ module.exports = {
     host: 'localhost',
     username: 'postgres',
     password: 'dev', 
-    database: 'sqlnode',
+    database: 'db_api',
     define: {
         timestamps: true,
-        underscored: true
+        underscored: true,
     },
 };
