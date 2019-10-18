@@ -30,7 +30,7 @@ execute o comando _npm install sequelize-cli -D_ para instalar nas dependências
 
 #### Dúvidas sobre o uso do SEQUELIZE ORM
 
-[Sequelize Status](https://sequelize.org/master/manual/getting-started.html)<space><space>
+[Sequelize](https://sequelize.org/master/manual/getting-started.html)<space><space>
 
 
 
