@@ -13,13 +13,9 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-      return queryInterface.addColumn(
+      return queryInterface.removeColunn(
         'users',
         'birth',      
-        {
-          type: Sequelize.DATE(6),
-          unique: true,
-        },
       );
     },
 };
