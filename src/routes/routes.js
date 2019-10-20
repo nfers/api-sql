@@ -7,6 +7,7 @@ routes.get('/', (req, res) => {
     return res.json({ Api: 'In Development'});
 })
 
+routes.get('/users', UserController.index);
 routes.post('/users', UserController.store);
 
 module.exports = routes;
