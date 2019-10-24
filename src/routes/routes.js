@@ -5,17 +5,16 @@ const ExercisesController = require('../controllers/ExercisesController');
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
-    return res.json({ Api: 'In Development'});
-})
-
 routes.get('/users', UserController.index);
 routes.post('/users', UserController.store);
 
-routes.post('/addresses', )
-
 routes.get('/exercises', ExercisesController.index);
 routes.post('/exercises', ExercisesController.store);
+routes.get('/exercises/:id', ExercisesController.findOne);
+routes.put('/exercises/:id', ExercisesController.update);
+
+routes.post('/users/:user_id/addresses', AddressController.store);
+//sconsole.log(routes.post);
 
 module.exports = routes;
 
