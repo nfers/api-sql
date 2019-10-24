@@ -26,22 +26,14 @@ module.exports = {
        if(Excercises["exercicio" + id] != null){
          // update data
          Excercises["exercicio" + id] = updatedExercise;
-     
-         console.log("--->Update Successfully, exercicio: \n" + JSON.stringify(Excercises, null, 4))
-        
-         // return
+
          res.end("Update Successfully! \n" + JSON.stringify(updatedExercise, null, 4));
        }else{
          res.end("Don't Exist Customer:\n:" + JSON.stringify(updatedExercise, null, 4));
        }
      },
      
-    // exports.delete = function(req, res) {
-    //   var deleteCustomer = customers["customer" + req.params.id];
-    //     delete customers["customer" + req.params.id];
-    //     console.log("--->After deletion, customer list:\n" + JSON.stringify(customers, null, 4) );
-    //     res.end( "Deleted customer: \n" + JSON.stringify(deleteCustomer, null, 4));
-    // };
+
 
 
 }
