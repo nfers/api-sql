@@ -12,4 +12,6 @@ User.init(connection);
 Exercises.init(connection);
 Address.init(connection);
 
+Address.associate(connection.models);
+
 module.exports = connection;

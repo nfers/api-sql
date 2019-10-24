@@ -10,6 +10,10 @@ class Address extends Model {
         {
             sequelize
         })
+    };
+
+    static associate(models) {
+        this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user'});
     }
 }
 
