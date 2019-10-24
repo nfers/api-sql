@@ -2,6 +2,8 @@ const express = require('express');
 const UserController = require('../controllers/UserController');
 const AddressController = require('../controllers/AddressController');
 const ExercisesController = require('../controllers/ExercisesController');
+const ReportController = require('../controllers/ReportController');
+
 
 const routes = express.Router();
 
@@ -13,8 +15,10 @@ routes.post('/exercises', ExercisesController.store);
 routes.get('/exercises/:id', ExercisesController.findOne);
 routes.put('/exercises/:id', ExercisesController.update);
 
+routes.get('/users/:user_id/addresses', AddressController.index);
 routes.post('/users/:user_id/addresses', AddressController.store);
-//sconsole.log(routes.post);
+
+routes.get('/reports', ReportController.show);
 
 module.exports = routes;
 
