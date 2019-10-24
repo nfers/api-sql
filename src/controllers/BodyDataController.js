@@ -8,6 +8,7 @@ module.exports = {
         const user = await User.findByPk(user_id, {
             include: { association: 'bodydata' }
         });
+        console.log(association);
 
         return res.json(user);
     },
@@ -25,15 +26,17 @@ module.exports = {
         if (!user) {
             return res.status(400).json({ error: "Ooops, o usuário infomado não existe:  " + user_id });          
         }
-
+        
         const evaluation = await BodyData.create({
             weight, 
             height, 
             evaluation_date, 
             user_id  
+            
         });
+        console.log(user_id);
 
-        return res.json(local)
+        return res.json(evaluation)
     }
 };
 
