@@ -8,7 +8,7 @@ class User extends Model {
             birth: DataTypes.DATE,
         }, {
             sequelize
-         })
+        })
     }
 
     static associate(models) {
@@ -16,9 +16,6 @@ class User extends Model {
         this.hasMany(models.BodyData, { foreignKey: 'user_id', as: 'body_data' });
     }
 
-    //  static associate(models) {
-        
-    //  }
 };
 
 

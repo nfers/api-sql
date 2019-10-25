@@ -1,10 +1,14 @@
 const express = require('express');
-const routes = require('./routes/routes');
+const cors = require('cors');
 
+const routes = require('./routes/routes');
 require('./database/');
+
 const app = express();
 
 app.use(express.json());
+
+app.use(cors());
 
 app.use(function(req, res, next) {  
     res.header('Access-Control-Allow-Origin', req.headers.origin);
@@ -12,7 +16,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(routes);
+app.use('/api', routes);
 
 app.listen(3031);
 

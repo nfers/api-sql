@@ -14,26 +14,25 @@ module.exports = {
     async store(req, res) {
         const { user_id } = req.params;
 
-        const { 
-            weight, 
-            height, 
-            evaluation_date 
+        const {
+            weight,
+            height,
+            evaluation_date
         } = req.body;
 
         const user = await User.findByPk(user_id);
 
         if (!user) {
-            return res.status(400).json({ error: "Ooops, o usuário infomado não existe:  " + user_id });          
+            return res.status(400).json({ error: "Ooops, o usuário infomado não existe:  " + user_id });
         }
-        
+
         const evaluation = await BodyData.create({
-            weight, 
-            height, 
-            evaluation_date, 
-            user_id  
-            
+            weight,
+            height,
+            evaluation_date,
+            user_id
+
         });
-        console.log(user_id);
 
         return res.json(evaluation)
     }

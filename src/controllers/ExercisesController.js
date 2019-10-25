@@ -16,24 +16,22 @@ module.exports = {
     },
     async findOne(req, res) {
         const exercise = { description, limbs } = req.params.id;
-        console.log(req.params);
-
+        // implementar try catch tratamento de erro
         return res.json(exercise);
     },    
     async update(req, res) {
-       var id = parseInt(req.params.id);
+
+      var id = parseInt(req.params.id);
+
        var updatedExercise = req.body; 
+
        if(Excercises["exercicio" + id] != null){
-         // update data
          Excercises["exercicio" + id] = updatedExercise;
 
-         res.end("Update Successfully! \n" + JSON.stringify(updatedExercise, null, 4));
+         res.end("Update Successfully! \n" + id );
        }else{
-         res.end("Don't Exist Customer:\n:" + JSON.stringify(updatedExercise, null, 4));
+         res.end("Don't Exist Customer:\n:" + id);
        }
      },
-     
-
-
-
+   
 }
