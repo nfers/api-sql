@@ -18,6 +18,7 @@ routes.put('/exercises/:id', ExercisesController.update);
 
 routes.get('/users/:user_id/bodydata', BodyDataController.index);
 routes.post('/users/:user_id/bodydata', BodyDataController.store);
+routes.delete('/users/:user_id/bodydata', BodyDataController.delete);
 
 
 routes.get('/users/:user_id/addresses', AddressController.index);
