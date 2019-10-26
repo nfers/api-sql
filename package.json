@@ -3,20 +3,47 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "mocha || true"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfers/api-sql.git"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "tdd",
+    "mocha",
+    "chai",
+    "npm",
+    "sequelize",
+    "pg",
+    "express",
+    "cors"
+  ],
   "author": "Nayara Ferreira",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nfers/api-sql/issues"
+  },
+  "homepage": "https://github.com/nfers/api-sql/blob/master/README.md",
+  
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "feathers-sequelize": "^6.1.0",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.19.7"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
     "nodemon": "^1.19.4",
     "sequelize-cli": "^5.5.1"
   }
