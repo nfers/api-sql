@@ -13,7 +13,10 @@ module.exports = {
             name, 
             email, 
             birth 
-        });
+        })
+        .then(newUser => {
+            console.log(`Usuário ${newUser.name}, Email ${newUser.email} com ID ${newUser.id} foi criado com sucesso.`);
+          });
         
         return res.json(userC);        
     }
