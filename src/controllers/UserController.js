@@ -16,8 +16,10 @@ module.exports = {
         })
         .then(newUser => {
             console.log(`Usuário ${newUser.name}, Email ${newUser.email} com ID ${newUser.id} foi criado com sucesso.`);
-          });
+                
+        });
+        return res.json('Sucess'); 
         
-        return res.json(userC);        
+           
     }
 };
