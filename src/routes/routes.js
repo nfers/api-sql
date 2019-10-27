@@ -25,6 +25,7 @@ routes.get('/users/:user_id/addresses', AddressController.index);
 routes.post('/users/:user_id/addresses', AddressController.store);
 
 routes.get('/reports', ReportController.show);
+routes.get('/reports/birth', ReportController.showBirth);
 
 module.exports = routes;
 
